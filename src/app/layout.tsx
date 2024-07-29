@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import GlobalContextProvider from '@/context/GlobalContextProvider'
-import Navbar from '../../Codynn-Components/navbars/Navbar'
-import Footer from '../../Codynn-Components/footer/Footer'
 import { Suspense } from 'react'
 import { poppins } from '@/lib/fonts'
 
@@ -26,12 +24,12 @@ export default function RootLayout({
             <Suspense
               fallback={<div className='text-center mt-4'>Loading...</div>}
             >
-              <Navbar />
+              <div>Navbar</div>
             </Suspense>
 
             <div className='px-7'>{children}</div>
           </main>
-          <Footer />
+          <div>Footer</div>
         </GlobalContextProvider>
       </body>
     </html>

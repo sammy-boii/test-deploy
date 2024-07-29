@@ -7,7 +7,6 @@ import GET_POPULAR_BLOGS from '@/graphql/queries/getPopularBlog.gql'
 import { BlogDataI } from '@/types/types'
 import { formatDate } from '@/lib/utils'
 import { apolloServer } from '@/services/apollo-server'
-import EditorToHtml from '../../../Codynn-Components/editorToHtml/EditorToHtml'
 import { BLOGS_DOMAIN_URL } from '@/constants/domain_url'
 
 const imgs = [trendOne, trendTwo]
@@ -66,9 +65,7 @@ export function LeftSection({
 
       <div className='text-3xl text-wrap font-bold'>{title}</div>
 
-      <div className='mt-4'>
-        <EditorToHtml content={content} />
-      </div>
+      <div className='mt-4'>{JSON.stringify(content)}</div>
     </div>
   )
 }

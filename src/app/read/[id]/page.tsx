@@ -7,7 +7,6 @@ import { CATEGORY_COLORS } from '@/constants/categoryColors'
 import GET_PROFILE from '@/graphql/queries/getProfile.gql'
 import FollowButton from '@/components/utils/FollowButton'
 import { Bookmark, Ellipsis, PenLine, Upload } from 'lucide-react'
-import EditorToHtml from '../../../../Codynn-Components/editorToHtml/EditorToHtml'
 import Image from 'next/image'
 import { BLOGS_DOMAIN_URL } from '@/constants/domain_url'
 import { normal_poppins } from '@/lib/fonts'
@@ -114,9 +113,7 @@ const ReadPage = async ({ params }: { params: { id: string } }) => {
           <Ellipsis />
         </div>
       </div>
-      <div className='pt-12'>
-        <EditorToHtml content={blogData.getBlog?.content} />
-      </div>
+      <div className='pt-12'>{JSON.stringify(blogData.getBlog?.content)}</div>
     </div>
   )
 }

@@ -7,15 +7,8 @@ import Recommended from '@/components/layouts/Recommended'
 import SearchBar from '@/components/layouts/SearchBar'
 import Results from '@/components/layouts/Results'
 import Link from 'next/link'
-import { Car, PenLine } from 'lucide-react'
-import { DomainUrl } from '../../Codynn-Components/constants/DomainUrl'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel'
+import { PenLine } from 'lucide-react'
+
 import { BLOGS_DOMAIN_URL } from '@/constants/domain_url'
 
 export default function Home({

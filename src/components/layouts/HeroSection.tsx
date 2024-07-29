@@ -5,7 +5,6 @@ import GET_ALL_BLOGS from '@/graphql/queries/getAllBlogs.gql'
 
 import Link from 'next/link'
 import { apolloServer } from '@/services/apollo-server'
-import EditorToHtml from '../../../Codynn-Components/editorToHtml/EditorToHtml'
 import { BLOGS_DOMAIN_URL } from '@/constants/domain_url'
 
 export default async function HeroSection() {
@@ -32,7 +31,7 @@ export default async function HeroSection() {
             {latestBlog?.title}
           </h1>
           <div className='font-normal relative max-w-[550px] h-[200px] text-lg text-justify'>
-            <EditorToHtml content={latestBlog?.content} />
+            {JSON.stringify(latestBlog?.content)}
             <div className='absolute left-0 bottom-0 w-full h-4' />
           </div>
 

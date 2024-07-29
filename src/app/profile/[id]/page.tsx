@@ -15,11 +15,11 @@ import img2 from '../../../../public/trendTwo.png'
 import { formatDate } from '@/lib/utils'
 import { BLOGS_DOMAIN_URL } from '@/constants/domain_url'
 import { type UserDataI } from '@/types/types'
-import { DomainUrl } from '../../../../Codynn-Components/constants/DomainUrl'
-import EditorToHtml from '../../../../Codynn-Components/editorToHtml/EditorToHtml'
 import { useQuery } from '@apollo/client'
 
 const imgs = [img1, img2]
+
+const DomainUrl = 'https://codynn.com'
 
 const ViewProfilePage = ({ params: { id } }: { params: { id: string } }) => {
   const { data: userData, loading: userLoading } = useQuery(GET_PROFILE_BY_ID, {
@@ -161,9 +161,7 @@ function RightFeed({
           {title}
         </div>
 
-        <div className='h-16'>
-          <EditorToHtml content={content} />
-        </div>
+        <div className='h-16'>{JSON.stringify(content)}</div>
 
         <div className='text-[14px] mt-[-4px] font-bold underline opacity-30'>
           Read More
