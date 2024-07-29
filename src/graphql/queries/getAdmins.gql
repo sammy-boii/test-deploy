@@ -1,0 +1,9 @@
+query GetAdmins {
+  getAdmins {
+    _id
+    email
+    passwordHash
+    createdAt
+    updatedAt
+  }
+}

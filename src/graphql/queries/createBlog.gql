@@ -1,0 +1,49 @@
+mutation CreateBlog(
+  $title: String!
+  $content: String!
+  $tags: [String!]!
+  $category: String!
+) {
+  createBlog(
+    input: {
+      title: $title
+      content: $content
+      tags: $tags
+      category: $category
+    }
+  ) {
+    _id
+    title
+    content
+    authorName
+    author {
+      _id
+      first_name
+      last_name
+      email
+      username
+      phone_number
+      country
+      Address
+      status
+      date_of_birth
+      gender
+      profile_picture
+      bio
+      Socials
+      tier_id
+      preferredLanguage
+      onboarding
+      user_id
+      age
+      coins
+      xp
+      following
+      follower
+    }
+    tags
+    like
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,6 @@
+mutation UnfollowUser($id: ID!) {
+  unfollowUser(id: $id) {
+    unfollowingID
+    message
+  }
+}

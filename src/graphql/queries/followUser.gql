@@ -1,0 +1,6 @@
+mutation FollowUser($id: ID!) {
+  followUser(id: $id) {
+    message
+    followingID
+  }
+}

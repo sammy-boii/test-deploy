@@ -1,0 +1,12 @@
+query UserFollowers($id: ID!) {
+  userFollowers(id: $id) {
+    _id
+    first_name
+    last_name
+    email
+    username
+    profile_picture
+    following
+    follower
+  }
+}

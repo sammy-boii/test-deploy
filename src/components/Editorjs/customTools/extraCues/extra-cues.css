@@ -1,0 +1,12 @@
+.extra-cues-wrapper{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    background: gray;
+}
+.extra-cues-wrapper textarea{
+    width: 99% !important;
+}
+.extra-cues-wrapper select{
+    width: 100%;
+}
